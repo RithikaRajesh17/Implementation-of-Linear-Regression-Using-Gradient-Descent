@@ -38,7 +38,7 @@ def linear_regression(X1,y,learning_rate=0.01,num_iters=1000):
         theta=learning_rate*(1/len(X1))*X.T.dot(errors)
         return theta
     
-data=pd.read_csv("C:\\Users\\admin\\Desktop\\50_Startups.csv",header=None)
+data=pd.read_csv("50_Startups.csv")
 X=(data.iloc[1:,:-2].values  )
 X1=X.astype(float)
 scaler=StandardScaler()
@@ -59,13 +59,13 @@ print(f"Predicted value : {pre}")
 ## Output:
 ![linear regression using gradient descent](sam.png)
 ```
-0  R&D Spend  Administration  Marketing Spend       State     Profit
-1   165349.2        136897.8         471784.1    New York  192261.83
-2   162597.7       151377.59        443898.53  California  191792.06
-3  153441.51       101145.55        407934.54     Florida  191050.39
-4  144372.41       118671.85        383199.62    New York  182901.99
-
-Predicted value : [[257556.43387625]]
+   R&D Spend  Administration  Marketing Spend       State     Profit
+0  165349.20       136897.80        471784.10    New York  192261.83
+1  162597.70       151377.59        443898.53  California  191792.06
+2  153441.51       101145.55        407934.54     Florida  191050.39
+3  144372.41       118671.85        383199.62    New York  182901.99
+4  142107.34        91391.77        366168.42     Florida  166187.94
+Predicted value : [[257588.39836367]]
 ```
 
 
